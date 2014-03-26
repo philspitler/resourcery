@@ -1,0 +1,22 @@
+{
+  "name": "resourcery",
+  "version": "1.0.0",
+  "description": "resourcery ==========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/software-happens/resourcery.git"
+  },
+  "dependencies": {
+    "request": "latest"
+  },
+  "author": "PRS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/software-happens/resourcery/issues"
+  },
+  "homepage": "https://github.com/software-happens/resourcery"
+}
