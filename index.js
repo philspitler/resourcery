@@ -1,8 +1,7 @@
 var path = require('path');
 var request = require('request');
 
-module.exports = function(app, resource, platformBaseUrl, options, viewDir) {
-  viewDir = viewDir || options;
+module.exports = function(app, resource, platformBaseUrl, viewDir, options) {
   options = options || {};
 
   //for any GET to /resources (even /resources/2)
@@ -21,7 +20,7 @@ module.exports = function(app, resource, platformBaseUrl, options, viewDir) {
         forgeTemplateName(req, function (templateName) {
           res.render(path.join(viewDir, templateName), {data:body});
         });
-  
+
 
       }
 
@@ -39,4 +38,5 @@ module.exports = function(app, resource, platformBaseUrl, options, viewDir) {
   };
 };
 
-
+// in case someone wants to make it look more specific to what is going on
+module.exports.route = module.exports;
