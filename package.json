@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/software-happens/resourcery.git"
+    "url": "git://github.com/philspitler/resourcery.git"
   },
   "dependencies": {
     "request": "latest"
@@ -16,7 +16,7 @@
   "author": "PRS",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/software-happens/resourcery/issues"
+    "url": "https://github.com/philspitler/resourcery/issues"
   },
-  "homepage": "https://github.com/software-happens/resourcery"
+  "homepage": "https://github.com/philspitler/resourcery"
 }
