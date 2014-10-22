@@ -1,8 +1,7 @@
 {
   "name": "resourcery",
   "version": "1.0.0",
-  "description": ["Micro Framework for wiring up front end routes to back-end endpoints to pass the request along",
-    "in order to retrieve the data for that page.  It sets a convention for naming your templates to match the url."],
+  "description": ["Micro Framework for wiring up front end routes to back-end endpoints to pass the request along"],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
