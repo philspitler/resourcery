@@ -1,7 +1,9 @@
 {
   "name": "resourcery",
   "version": "1.0.0",
-  "description": ["Micro Framework for wiring up front end routes to back-end endpoints to pass the request along"],
+  "description": [
+    "Micro Framework for wiring up front end routes to back-end endpoints to pass the request along"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +13,7 @@
     "url": "git://github.com/philspitler/resourcery.git"
   },
   "dependencies": {
+    "express": "^4.13.3",
     "request": "latest"
   },
   "author": "PRS",
