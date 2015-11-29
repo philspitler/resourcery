@@ -1,28 +1,29 @@
-var path = require('path');
 var request = require('request');
+var express = require('express');
+var router = express.Router();
 
-module.exports = function(app, resource, platformBaseUrl) {
-  //for any GET to /resources (even /resources/2)
-  app.get('/'+resource+'*', function(req, res) {
+module.exports = {
+	proxy: function(options) {
+		router.use(function(req, res) {
+			console.log(req);
+			var reqPath = req.originalUrl.split('/');
 
-    //use the platformBaseUrl and the requested URL to create the url to call for data
-    var platformUrl = platformBaseUrl + req.url;
+			reqPath.splice(1, 1);
+			options.method = req.method;
+			options.url = reqPath.join('/');
 
-    //place call to the platform matching the same route as the browser URL
-    request(platformUrl, function (error, response, body) {
-
-      //if that all went well
-      if (!error && response.statusCode == 200) {
-
-        //render data
-        res.send(body);
-
-
-      }
-
-    });
-  });
+			//place call to the platform matching the same route as the browser URL
+			request(options, function(error, response, body) {
+				//if that all went well
+				if (!error) {
+					res.json(JSON.parse(body));
+				} else {
+					console.log(error);
+				}
+			});
+		});
+		return router;
+	}
 };
 
-// in case someone wants to make it look more specific to what is going on
-module.exports.route = module.exports;
+// module.exports = router;
