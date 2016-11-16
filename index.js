@@ -1,11 +1,12 @@
 var request = require('request');
 var express = require('express');
-var router = express.Router();
+
 
 module.exports = {
 	proxy: function(options) {
+		var router = express.Router();
 		router.use(function(req, res) {
-			console.log(req);
+
 			var reqPath = req.originalUrl.split('/');
 
 			reqPath.splice(1, 1);
